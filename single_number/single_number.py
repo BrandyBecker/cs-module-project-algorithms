@@ -4,8 +4,13 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    placeHolder = []
+    for i in arr:                    # loop through given array
+        if i in placeHolder:         # if the current number already 
+            placeHolder.remove(i)    # remove it from place holder
+        else:
+            placeHolder.append(i)    # if the number does not exist add it to placeholder
+    return placeHolder[0] 
 
 
 if __name__ == '__main__':
