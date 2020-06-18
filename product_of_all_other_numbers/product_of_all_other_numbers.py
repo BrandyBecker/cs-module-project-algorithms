@@ -4,8 +4,16 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    placeHolder = [0] * len(arr)              # create placeholder, assign 0 to all indexes
+    total = 1                                 # total to be multiplied 
+    for i in range(len(arr)):
+        total = total * arr[i]                # multiply everything and add to total
+        
+    for i in range(len(arr)):
+        placeHolder[i] = int(total/arr[i])    # for the spot in placehold divide 
+                    
+    return placeHolder
 
-    pass
 
 
 if __name__ == '__main__':
